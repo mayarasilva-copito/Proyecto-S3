@@ -64,9 +64,6 @@ function Portada() {
                   Esta es solo la primera página de nuestra historia, pero con
                   cada huella que dejamos sabemos que estamos construyendo un
                   futuro donde más animales tengan la vida feliz que merecen.
-                  Porque para nosotras, cada vida cuenta, cada adopción es un
-                  triunfo, y cada sonrisa peluda que logramos es la mayor
-                  recompensa a nuestro esfuerzo.
                 </p>
               </div>
             </div>
