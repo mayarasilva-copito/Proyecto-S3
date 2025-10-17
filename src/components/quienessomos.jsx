@@ -3,7 +3,7 @@ function Quienessomos() {
   return (
     <>
       <div className="texto">
-        <section id="historia">
+        <section id="historia" className="section_quienesomos">
           <h2 className="section-title">Nuestra Historia</h2>
           <div className="card-container">
             <div class="card">

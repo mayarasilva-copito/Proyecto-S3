@@ -1,0 +1,32 @@
+{
+    "Listademascotas": [
+    {
+      "id": 1,
+      "nombre": "lola",
+      "año": 2023,
+      "genero": "hembra",
+      "imagen": "gato1.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "manchis",
+      "año": 2023,
+      "genero": "macho",
+      "imagen": "lolas.jpg"
+    },
+    {
+      "id":3,
+      "nombre":"figaro",
+      "año": 2021,
+      "genero":"macho",
+      "imagen": "lunas.jpg"
+    },
+    {
+      "id":4,
+      "nombre":"mocho",
+      "año": 2021,
+      "genero":"macho",
+      "imagen": "mocho.jpg"
+    }
+  ]
+}
