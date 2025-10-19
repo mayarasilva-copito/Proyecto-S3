@@ -1,33 +1,61 @@
+// ...existing code...
+import React from "react";
 import datos from "../data/mascotas.json";
+import "./mascotas.css";
+
 function Listademascotas() {
-  return (
-    <>
-      <div className="bg-purple-200 min-h-screen p-6">
-        <h1 className="text-3xl font-bold text-center text-purple-900 mb-6">
-          Gatos
-        </h1>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {datos.Listademascotas.map((Listademascotas) => (
-            <div
-              className="bg-white shadow-md rounded-2xl p-4 flex flex-col items-center h-100"
-              key={Listademascotas.id}
-            >
-              <img
-                src={`./${Listademascotas.imagen}`}
-                alt={Listademascotas}
-                className="w-full h-70 object-cover rounded-xl mb-3"
-              />
-              <h3 className="text-lg font-semibold text-center text-purple-800 mt-2 h-20 flex items-center justify-center">
-                {Listademascotas.nombre}
-              </h3>
-              <p className="text-gray-800">{Listademascotas.año}</p>
-              <p className="text-gray-800">{Listademascotas.genero}</p>
-            </div>
-          ))}
+  const todas = datos.Listademascotas || [];
+
+  const lower = (s) => (s || "").toLowerCase();
+  const perritos = todas.filter((m) => ["perrito", "perrita"].includes(lower(m.tipo)));
+  const gatitos = todas.filter((m) => ["gatito", "gatita"].includes(lower(m.tipo)));
+
+  function renderCard(m) {
+    const src = m.imagen || m.image || m.foto || "";
+    return (
+      <div className="ms-card" key={m.id ?? m.nombre}>
+        {src ? <img className="ms-img" src={src} alt={m.nombre} /> : <div className="ms-img ms-noimg">Sin foto</div>}
+        <div className="ms-band">{m.nombre}</div>
+        <div className="ms-info"><strong>Edad:</strong> <span>{m.edad ?? "—"}</span></div>
+        <div className="ms-info"><strong>Género:</strong> <span>{m.genero ?? "—"}</span></div>
+        <div className="ms-detail">
+          <div style={{ fontWeight: 700, marginBottom: 6 }}>Detalle</div>
+          <div>{m.descripcion ?? "Sin descripción."}</div>
         </div>
       </div>
-    </>
+      
+    );
+  }
+
+  function irAGatitos() {
+    const el = document.getElementById("gatitos");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  }
+
+  return (
+    <div className="ms-page">
+      <h1 className="ms-title">Mascotas</h1>
+      <p className="ms-sub">Perros arriba · Gatos más abajo</p>
+
+      <h3 className="ms-section-title">Perros ({perritos.length})</h3>
+      <div className="ms-grid4">
+        {perritos.length ? perritos.map(renderCard) : <div>No hay perros.</div>}
+      </div>
+
+      <div className="ms-hint">
+        <div className="ms-pill">💡 Más abajo están los gatos</div>
+        <button className="ms-btn" onClick={irAGatitos}>Ir a Gatos ↓</button>
+      </div>
+
+      <section id="gatitos" style={{ marginTop: 20 }}>
+        <h3 className="ms-section-title">Gatos ({gatitos.length})</h3>
+        <div className="ms-grid4">
+          {gatitos.length ? gatitos.map(renderCard) : <div>No hay gatos.</div>}
+        </div>
+      </section>
+    </div>
   );
 }
 
 export default Listademascotas;
+// ...existing code...

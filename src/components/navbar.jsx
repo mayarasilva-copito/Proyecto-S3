@@ -23,6 +23,9 @@ function Navbar() {
               <Link to="/Formulario">Formulario</Link>
             </li>
             <li className="">
+              <Link to="/Cuidados">Cuidados</Link>
+            </li>
+            <li className="">
               <Link to="/Contactanos">Contactos</Link>
             </li>
           </ul>
