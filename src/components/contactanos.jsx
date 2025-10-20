@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import { FaMapMarkerAlt, FaPhoneAlt, FaInstagram, FaEnvelope, FaGlobe } from "react-icons/fa";
+import { MdLocationOn, MdPhone, MdEmail, MdLanguage } from "react-icons/md";
+import { FaInstagram } from "react-icons/fa";
 import "./contactanos.css";
 
 function Contactanos() {
@@ -27,23 +28,25 @@ function Contactanos() {
     setTimeout(() => setEnviado(false), 3000);
   };
 
-  // Igualar altura de ambos contenedores
   useEffect(() => {
     if (containerRef.current) {
-      const boxes = containerRef.current.querySelectorAll(".formulario-box, .info-box");
-      const maxHeight = Math.max(...Array.from(boxes).map((b) => b.scrollHeight));
+      const boxes = containerRef.current.querySelectorAll(
+        ".formulario-box, .info-box"
+      );
+      const maxHeight = Math.max(
+        ...Array.from(boxes).map((b) => b.scrollHeight)
+      );
       setAltura(`${maxHeight}px`);
     }
   }, []);
 
   return (
     <div className="contacto-principal" ref={containerRef}>
-      {/* FORMULARIO */}
       <div className="formulario-box" style={{ height: altura }}>
         <h2>💖 Formulario de Donaciones</h2>
         <p>
-          ¡Gracias por apoyar a <strong>Happy Tails</strong>! 🐾  
-          Tu donación ayuda a darles una segunda oportunidad a nuestros peluditos.
+          ¡Gracias por apoyar a <strong>Happy Tails</strong>! 🐾 Tu donación
+          ayuda a darles una segunda oportunidad a nuestros peluditos.
         </p>
         <form onSubmit={handleSubmit}>
           <input
@@ -88,16 +91,17 @@ function Contactanos() {
             onChange={handleChange}
           ></textarea>
           <button type="submit">Enviar Donación</button>
-          {enviado && <p className="enviado">¡Gracias por tu apoyo a Happy Tails! 💕</p>}
+          {enviado && (
+            <p className="enviado">¡Gracias por tu apoyo a Happy Tails! 💕</p>
+          )}
         </form>
       </div>
 
-      {/* INFORMACIÓN */}
       <div className="info-box" style={{ height: altura }}>
         <h2>📍 Contacto Happy Tails</h2>
 
         <div className="info-item">
-          <FaMapMarkerAlt className="iconito" />
+          <MdLocationOn className="iconito" />
           <div>
             <strong>Dirección</strong>
             <p>Av. Siempre Viva 123, Lima - Perú</p>
@@ -105,7 +109,7 @@ function Contactanos() {
         </div>
 
         <div className="info-item">
-          <FaPhoneAlt className="iconito" />
+          <MdPhone className="iconito" />
           <div>
             <strong>Teléfono</strong>
             <p>+51 987 654 321</p>
@@ -127,7 +131,7 @@ function Contactanos() {
         </div>
 
         <div className="info-item">
-          <FaEnvelope className="iconito" />
+          <MdEmail className="iconito" />
           <div>
             <strong>Correo principal</strong>
             <p>contacto@happytails.com</p>
@@ -135,7 +139,7 @@ function Contactanos() {
         </div>
 
         <div className="info-item">
-          <FaEnvelope className="iconito" />
+          <MdEmail className="iconito" />
           <div>
             <strong>Correo alternativo</strong>
             <p>ayuda@happytails.com</p>
@@ -143,18 +147,22 @@ function Contactanos() {
         </div>
 
         <div className="info-item">
-          <FaGlobe className="iconito" />
+          <MdLanguage className="iconito" />
           <div>
             <strong>Sitio web</strong>
-            <a href="http://localhost:5173/Portada" target="_blank" rel="noreferrer">
+            <a
+              href="http://localhost:5173/Portada"
+              target="_blank"
+              rel="noreferrer"
+            >
               www.happytails.com
             </a>
           </div>
         </div>
 
         <p className="mensaje-final">
-          🌸 Gracias por visitar nuestra página.  
-          ¡Tu amor y apoyo hacen que más colitas se muevan felices! 🐕🐾
+          🌸 Gracias por visitar nuestra página. ¡Tu amor y apoyo hacen que más
+          colitas se muevan felices! 🐕🐾
         </p>
       </div>
     </div>

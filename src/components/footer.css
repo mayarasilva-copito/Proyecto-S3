@@ -7,11 +7,11 @@
   padding: 20px 50px;
   border-top: 3px solid #eb7563;
   font-size: 1.6rem;
-  position: fixed;  /* hace que el footer quede fijo */
-  bottom: 0;        /* al final de la pantalla */
+  /* position: fixed;  <-- quitado */
+  /* bottom: 0;        <-- quitado */
   left: 0;
   right: 0;
-  z-index: 1000;    /* para que quede encima de otros elementos */
+  /* ahora se comporta como un footer normal, no se queda estático */
 }
 
 .mi-footer p {

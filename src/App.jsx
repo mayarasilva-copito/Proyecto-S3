@@ -48,24 +48,30 @@ function App() {
             path="/tips"
             element={
               <>
-                <Tips/>
+                <Tips />
               </>
             }
           />
-          <Route path="/Formulario" 
-          element=
-          {<>
-          <Formulario/>
-          </>} />
-          <Route path="/Contactanos" 
-          element=
-          {<>
-          <Contactanos/>
-          </>} />
+          <Route
+            path="/Formulario"
+            element={
+              <>
+                <Formulario />
+              </>
+            }
+          />
+          <Route
+            path="/Contactanos"
+            element={
+              <>
+                <Contactanos />
+              </>
+            }
+          />
         </Routes>
         <br />
         <br />
-      <Footer/>
+        <Footer />
       </BrowserRouter>
     </>
   );

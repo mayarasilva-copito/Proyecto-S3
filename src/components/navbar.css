@@ -143,3 +143,14 @@
 .carrito-panel.activo {
   right: 0;
 }
+.btn-carrito i {
+  font-size: 2rem; /* tamaño del icono */
+  color: #f19797; /* color normal */
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s; /* animación suave */
+}
+
+.btn-carrito i:hover {
+  color: #f19797; /* cambia de color al pasar el mouse */
+  transform: scale(1.2); /* agranda un poco */
+}

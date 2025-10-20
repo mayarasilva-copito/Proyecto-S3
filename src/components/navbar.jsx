@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { FaShoppingCart } from "react-icons/fa"; // 🛒 icono
 import "./navbar.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function Navbar() {
   const [carritoAbierto, setCarritoAbierto] = useState(false);
@@ -20,15 +20,27 @@ function Navbar() {
           </div>
 
           <ul className="nav-links">
-            <li><Link to="/Portada">Home</Link></li>
-            <li><Link to="/Quienessomos">¿Quiénes Somos?</Link></li>
-            <li><Link to="/Listademascotas">Mascotas</Link></li>
-            <li><Link to="/Formulario">Formulario</Link></li>
-            <li><Link to="/Tips">Cuidados</Link></li>
-            <li><Link to="/Contactanos">Contactos</Link></li>
+            <li>
+              <Link to="/Portada">Home</Link>
+            </li>
+            <li>
+              <Link to="/Quienessomos">¿Quiénes Somos?</Link>
+            </li>
+            <li>
+              <Link to="/Listademascotas">Mascotas</Link>
+            </li>
+            <li>
+              <Link to="/Formulario">Formulario</Link>
+            </li>
+            <li>
+              <Link to="/Tips">Cuidados</Link>
+            </li>
+            <li>
+              <Link to="/Contactanos">Contactos</Link>
+            </li>
             <li>
               <button className="btn-carrito" onClick={toggleCarrito}>
-                <FaShoppingCart size={22} />
+                <i className="fa-solid fa-cart-shopping"></i>
               </button>
             </li>
           </ul>
@@ -39,7 +51,9 @@ function Navbar() {
       <div className={`carrito-panel ${carritoAbierto ? "activo" : ""}`}>
         <h2>Mi Carrito 🐾</h2>
         <p>Aquí aparecerán las mascotas que elijas para adoptar.</p>
-        <button className="cerrar-btn" onClick={toggleCarrito}>Cerrar</button>
+        <button className="cerrar-btn" onClick={toggleCarrito}>
+          Cerrar
+        </button>
       </div>
     </>
   );
