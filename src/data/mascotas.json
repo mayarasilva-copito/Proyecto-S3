@@ -6,7 +6,7 @@
       "edad": "2 años",
       "genero": "Macho",
       "tipo": "Perrito",
-      "imagen": "https://placedog.net/400/300?id=1"
+      "imagen": "./perrito.png"
     },
     {
       "id": 2,
@@ -62,70 +62,6 @@
       "edad": "1 año",
       "genero": "Hembra",
       "tipo": "Perrita",
-      "imagen": "https://placedog.net/400/300?id=2"
-    },
-     {
-      "id": 2,
-      "nombre": "Luna",
-      "edad": "1 año",
-      "genero": "Hembra",
-      "tipo": "gatito",
-      "imagen": "https://placedog.net/400/300?id=2"
-    },
-    {
-      "id": 2,
-      "nombre": "Luna",
-      "edad": "1 año",
-      "genero": "Hembra",
-      "tipo": "gatito",
-      "imagen": "https://placedog.net/400/300?id=2"
-    },
-    {
-      "id": 2,
-      "nombre": "Luna",
-      "edad": "1 año",
-      "genero": "Hembra",
-      "tipo": "gatito",
-      "imagen": "https://placedog.net/400/300?id=2"
-    },
-    {
-      "id": 2,
-      "nombre": "Luna",
-      "edad": "1 año",
-      "genero": "Hembra",
-      "tipo": "gatito",
-      "imagen": "https://placedog.net/400/300?id=2"
-    },
-    {
-      "id": 2,
-      "nombre": "Luna",
-      "edad": "1 año",
-      "genero": "Hembra",
-      "tipo": "gatito",
-      "imagen": "https://placedog.net/400/300?id=2"
-    },
-    {
-      "id": 2,
-      "nombre": "Luna",
-      "edad": "1 año",
-      "genero": "Hembra",
-      "tipo": "gatito",
-      "imagen": "https://placedog.net/400/300?id=2"
-    },
-    {
-      "id": 2,
-      "nombre": "Luna",
-      "edad": "1 año",
-      "genero": "Hembra",
-      "tipo": "gatito",
-      "imagen": "https://placedog.net/400/300?id=2"
-    },
-    {
-      "id": 2,
-      "nombre": "Luna",
-      "edad": "1 año",
-      "genero": "Hembra",
-      "tipo": "gatito",
       "imagen": "https://placedog.net/400/300?id=2"
     }
   ]

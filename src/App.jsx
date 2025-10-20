@@ -8,6 +8,7 @@ import Portada from "./components/portada";
 import Quienessomos from "./components/quienessomos";
 import Footer from "./components/footer";
 import Listademascotas from "./components/mascotas";
+
 function App() {
   return (
     <>

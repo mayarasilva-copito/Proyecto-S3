@@ -106,3 +106,19 @@
   cursor: pointer;
   font-weight: 700;
 }
+.boton-adoptar {
+  background-color: #f19797;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.boton-adoptar:hover {
+  background-color: #f7b0b0;
+  transform: scale(1.05);
+}

@@ -22,7 +22,14 @@ function Listademascotas() {
           <div style={{ fontWeight: 700, marginBottom: 6 }}>Detalle</div>
           <div>{m.descripcion ?? "Sin descripción."}</div>
         </div>
+        <button
+            className="boton-adoptar"
+            onClick={() => irAlCarrito(mascota)}
+          >
+            🐾 Adoptar
+          </button>
       </div>
+      
       
     );
   }
@@ -41,21 +48,8 @@ function Listademascotas() {
       <div className="ms-grid4">
         {perritos.length ? perritos.map(renderCard) : <div>No hay perros.</div>}
       </div>
-
-      <div className="ms-hint">
-        <div className="ms-pill">💡 Más abajo están los gatos</div>
-        <button className="ms-btn" onClick={irAGatitos}>Ir a Gatos ↓</button>
-      </div>
-
-      <section id="gatitos" style={{ marginTop: 20 }}>
-        <h3 className="ms-section-title">Gatos ({gatitos.length})</h3>
-        <div className="ms-grid4">
-          {gatitos.length ? gatitos.map(renderCard) : <div>No hay gatos.</div>}
-        </div>
-      </section>
     </div>
   );
 }
 
 export default Listademascotas;
-// ...existing code...

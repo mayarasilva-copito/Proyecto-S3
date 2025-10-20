@@ -1,111 +1,145 @@
-:root {
-  --primary: #f19797; /* rosa pastel */
-  --bg: #ffffff;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: cursive;
-  margin: 0;
-}
-
-/* Navbar (prefijo nav-) */
 .nav-header {
-  width: 100%;
-  background: linear-gradient(90deg, var(--primary));
-  color: var(--bg);
-  padding: 0.6rem 1rem;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  background-color: #f19797;
+  padding: 14px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
+
 .nav-inner {
-  max-width: 1100px;
-  margin: 0 auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  align-items: center;
 }
 
-.nav-logo {
+/* Logo */
+.logito {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  text-decoration: none;
-  color: var(--bg);
-  background-image: url(../img/logo.png);
-}
-.nav-logo img {
-  width: 44px;
-  height: 44px;
-  border-radius: 8px;
-  display: block;
-}
-.nav-logo span {
-  font-size: 1.2rem;
+  gap: 12px;
 }
 
+.logo {
+  width: 65px;
+  height: 65px;
+  background-image: url("../img/logoooo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.titulo {
+  font-family: "Brush Script MT", cursive;
+  color: white;
+  font-size: 28px;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Links */
 .nav-links {
+  list-style: none;
   display: flex;
-  gap: 0.75rem;
   align-items: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
 }
-.nav-links li {
-  color: var(--bg);
+
+.nav-links a {
   text-decoration: none;
-  padding: 0.45rem 0.9rem;
-  border-radius: 10px;
-  transition: background 0.18s, transform 0.12s;
+  color: #ffffff;
   font-weight: 600;
+  font-size: 17px;
+  transition: color 0.3s ease, transform 0.2s ease;
+  position: relative;
 }
-.nav-links ali:hover {
-  background: rgba(255, 255, 255, 0.12);
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffe8e8;
   transform: translateY(-2px);
 }
 
-.nav-cta {
-  background: linear-gradient(90deg, var(--accent));
-  color: #fff !important;
-  padding: 0.5rem 1rem;
+.nav-links a:hover::after {
+  width: 100%;
 }
-.nav-icons {
+
+/* Botón del carrito */
+.btn-carrito {
+  background: white;
+  color: #f19797;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
   display: flex;
-  gap: 0.6rem;
-  align-items: center;
-}
-.icon-link {
-  display: inline-flex;
-  width: 36px;
-  height: 36px;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 8px;
-  text-decoration: none;
-}
-.icon-link svg {
-  display: block;
 }
 
-@media (max-width: 800px) {
-  .nav-links {
-    display: none;
-    position: absolute;
-    right: 1rem;
-    top: 64px;
-    background: rgba(255, 255, 255, 0.03);
-    padding: 0.8rem;
-    border-radius: 10px;
-    flex-direction: column;
-    min-width: 180px;
-  }
-  .nav-links.show {
-    display: flex;
-  }
+.btn-carrito:hover {
+  background-color: #ffe1e1;
+  transform: scale(1.1);
 }
 
-.logito div {
-  background: image(url(../img/logo.png));
+.carrito-panel h2 {
+  color: #f19797;
+  font-family: "Brush Script MT", cursive;
+  font-size: 30px;
+}
+
+.carrito-panel p {
+  color: #444;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.cerrar-btn {
+  background-color: #f19797;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cerrar-btn:hover {
+  background-color: #ffb4b4;
+}
+.carrito-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 320px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
+  transition: right 0.4s ease;
+  padding: 20px;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.carrito-panel.activo {
+  right: 0;
 }
