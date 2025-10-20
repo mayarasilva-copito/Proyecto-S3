@@ -208,7 +208,7 @@ header .fa-bars {
   header .fa-bars {
     display: block;
     font-size: 3rem;
-    color: #333;
+    color: #000000;
     cursor: pointer;
     padding: 1rem;
   }
@@ -335,7 +335,7 @@ h1 {
   /* Soporte para Safari */
   padding: 20px;
   border-radius: 12px;
-  color: #333;
+  color: #675c5c;
 }
 
 h1.text-center {
@@ -413,4 +413,16 @@ p {
 
 .text-container p {
   color: #000000;
+}
+
+/* Texto del hero (portada) */
+.hero-content h1,
+.hero-content p {
+  color: white; /* letra blanca */
+}
+
+/* Texto de la sección de abajo (about) */
+.text-container h3,
+.text-container p {
+  color: black; /* letra negra */
 }

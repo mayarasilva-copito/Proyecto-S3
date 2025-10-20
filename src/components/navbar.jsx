@@ -24,7 +24,7 @@ function Navbar() {
             <li><Link to="/Quienessomos">¿Quiénes Somos?</Link></li>
             <li><Link to="/Listademascotas">Mascotas</Link></li>
             <li><Link to="/Formulario">Formulario</Link></li>
-            <li><Link to="/Cuidados">Cuidados</Link></li>
+            <li><Link to="/Tips">Cuidados</Link></li>
             <li><Link to="/Contactanos">Contactos</Link></li>
             <li>
               <button className="btn-carrito" onClick={toggleCarrito}>

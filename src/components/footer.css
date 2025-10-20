@@ -1,0 +1,35 @@
+.mi-footer {
+  background-color: #f19797; /* color rosa melón */
+  color: #000;
+  display: flex;
+  justify-content: space-between; /* texto a la izquierda, iconos a la derecha */
+  align-items: center;
+  padding: 20px 50px;
+  border-top: 3px solid #eb7563;
+  font-size: 1.6rem;
+  position: fixed;  /* hace que el footer quede fijo */
+  bottom: 0;        /* al final de la pantalla */
+  left: 0;
+  right: 0;
+  z-index: 1000;    /* para que quede encima de otros elementos */
+}
+
+.mi-footer p {
+  margin: 0;
+}
+
+.mi-footer .social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.mi-footer .social-icons a img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.mi-footer .social-icons a img:hover {
+  transform: scale(1.2);
+}

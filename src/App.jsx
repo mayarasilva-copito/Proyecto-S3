@@ -6,8 +6,11 @@ import "./App.css";
 import Navbar from "./components/navbar";
 import Portada from "./components/portada";
 import Quienessomos from "./components/quienessomos";
-import Footer from "./components/footer";
 import Listademascotas from "./components/mascotas";
+import Formulario from "./components/formulario";
+import Tips from "./components/tips";
+import Contactanos from "./components/contactanos";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -41,11 +44,28 @@ function App() {
               </>
             }
           />
-          <Route path="/Formulario" element={<></>} />
-          <Route path="/Contactanos" element={<></>} />
+          <Route
+            path="/tips"
+            element={
+              <>
+                <Tips/>
+              </>
+            }
+          />
+          <Route path="/Formulario" 
+          element=
+          {<>
+          <Formulario/>
+          </>} />
+          <Route path="/Contactanos" 
+          element=
+          {<>
+          <Contactanos/>
+          </>} />
         </Routes>
-
-        <Footer />
+        <br />
+        <br />
+      <Footer/>
       </BrowserRouter>
     </>
   );
