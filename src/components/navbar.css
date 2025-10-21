@@ -21,9 +21,9 @@
 }
 
 .logo {
-  width: 65px;
-  height: 65px;
-  background-image: url("../img/logoooo.png");
+  width: 80px;
+  height: 80px;
+  background-image: url("../img/logito.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -153,4 +153,140 @@
 .btn-carrito i:hover {
   color: #f19797; /* cambia de color al pasar el mouse */
   transform: scale(1.2); /* agranda un poco */
+}
+
+/* 📱 Versión móvil */
+@media (max-width: 768px) {
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .logito {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .titulo {
+    font-size: 22px;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    padding: 5px 0;
+  }
+
+  .btn-carrito {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+}
+
+/* 📱 Aún más pequeño (por ejemplo, celulares muy chicos) */
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 20px;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+  }
+
+  .logo {
+    width: 45px;
+    height: 45px;
+  }
+}
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+
+.menu-icon .barra {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* 🔹 Cuando se activa (X animada) */
+.menu-icon.activo .barra:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-icon.activo .barra:nth-child(2) {
+  opacity: 0;
+}
+.menu-icon.activo .barra:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* 📱 Ajustes para móvil */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    z-index: 300;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background-color: #f19797;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    display: none;
+    animation: slideDown 0.3s ease;
+  }
+
+  .nav-links.activo {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+  }
+
+  .btn-carrito {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+  }
+}
+
+/* ✨ Animación al abrir el menú */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

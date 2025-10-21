@@ -108,3 +108,10 @@ header {
 .team-card p {
   font-size: 90%;
 }
+.card-container img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}

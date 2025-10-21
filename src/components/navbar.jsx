@@ -5,49 +5,78 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function Navbar() {
   const [carritoAbierto, setCarritoAbierto] = useState(false);
+  const [menuAbierto, setMenuAbierto] = useState(false);
 
   const toggleCarrito = () => {
     setCarritoAbierto(!carritoAbierto);
+  };
+
+  const toggleMenu = () => {
+    setMenuAbierto(!menuAbierto);
   };
 
   return (
     <>
       <nav className="nav-header">
         <div className="nav-inner">
+          {/* 🔹 Logo */}
           <div className="logito">
             <div className="logo"></div>
             <h1 className="titulo">Happy Tails</h1>
           </div>
 
-          <ul className="nav-links">
+          {/* 🔹 Menú hamburguesa (solo en celular) */}
+          <div
+            className={`menu-icon ${menuAbierto ? "activo" : ""}`}
+            onClick={toggleMenu}
+          >
+            <div className="barra"></div>
+            <div className="barra"></div>
+            <div className="barra"></div>
+          </div>
+
+          {/* 🔹 Enlaces de navegación */}
+          <ul className={`nav-links ${menuAbierto ? "activo" : ""}`}>
             <li>
-              <Link to="/Portada">Home</Link>
+              <Link to="/Portada" onClick={() => setMenuAbierto(false)}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/Quienessomos">¿Quiénes Somos?</Link>
+              <Link to="/Quienessomos" onClick={() => setMenuAbierto(false)}>
+                ¿Quiénes Somos?
+              </Link>
             </li>
             <li>
-              <Link to="/Listademascotas">Mascotas</Link>
+              <Link to="/Listademascotas" onClick={() => setMenuAbierto(false)}>
+                Mascotas
+              </Link>
             </li>
             <li>
-              <Link to="/Formulario">Formulario</Link>
+              <Link to="/Formulario" onClick={() => setMenuAbierto(false)}>
+                Formulario
+              </Link>
             </li>
             <li>
-              <Link to="/Tips">Cuidados</Link>
+              <Link to="/Tips" onClick={() => setMenuAbierto(false)}>
+                Cuidados
+              </Link>
             </li>
             <li>
-              <Link to="/Contactanos">Contactos</Link>
+              <Link to="/Contactanos" onClick={() => setMenuAbierto(false)}>
+                Contactos
+              </Link>
             </li>
             <li>
               <button className="btn-carrito" onClick={toggleCarrito}>
-                <i className="fa-solid fa-cart-shopping"></i>
+                <i className="fa-solid fa-hand-holding-heart"></i>
               </button>
             </li>
           </ul>
         </div>
       </nav>
 
-      {/* Panel del carrito */}
+      {/* 🔹 Panel del carrito */}
       <div className={`carrito-panel ${carritoAbierto ? "activo" : ""}`}>
         <h2>Mi Carrito 🐾</h2>
         <p>Aquí aparecerán las mascotas que elijas para adoptar.</p>
