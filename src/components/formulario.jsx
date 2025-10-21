@@ -1,13 +1,63 @@
+import { useState } from "react";
 import "./formulario.css";
 
 function Formulario() {
+  // 🧠 Estado para los datos del formulario
+  const [formData, setFormData] = useState({
+    nombre: "",
+    email: "",
+    telefono: "",
+    direccion: "",
+    tipo_mascota: "",
+    experiencia: "",
+    tiempo_libre: "",
+    compromiso: "",
+  });
+
+  // ✅ Estado para controlar el popup de éxito
+  const [mostrarPopup, setMostrarPopup] = useState(false);
+
+  // 🔹 Cuando cambia un campo
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  // 🔹 Cuando se envía el formulario
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Aquí podrías guardar los datos en una base o enviar por API
+    console.log("Datos enviados:", formData);
+
+    // Mostrar popup de éxito
+    setMostrarPopup(true);
+
+    // Limpiar formulario
+    setFormData({
+      nombre: "",
+      email: "",
+      telefono: "",
+      direccion: "",
+      tipo_mascota: "",
+      experiencia: "",
+      tiempo_libre: "",
+      compromiso: "",
+    });
+
+    // Cerrar el popup después de 4 segundos
+    setTimeout(() => setMostrarPopup(false), 4000);
+  };
+
   return (
     <>
       <div className="formulario-contenedor">
         <h1>🐾 Formulario de Adopción</h1>
-        <p>Completa este formulario para brindarle un hogar a un peludito 🐶🐱</p>
+        <p>
+          Completa este formulario para brindarle un hogar a un peludito 🐶🐱
+        </p>
 
-        <form className="formulario-adopcion" action="#" method="post">
+        <form className="formulario-adopcion" onSubmit={handleSubmit}>
           {/* 🔹 Columna izquierda */}
           <div className="columna">
             <div className="campo">
@@ -16,6 +66,8 @@ function Formulario() {
                 type="text"
                 id="nombre"
                 name="nombre"
+                value={formData.nombre}
+                onChange={handleChange}
                 placeholder="Tu nombre completo"
                 required
               />
@@ -27,6 +79,8 @@ function Formulario() {
                 type="email"
                 id="email"
                 name="email"
+                value={formData.email}
+                onChange={handleChange}
                 placeholder="ejemplo@email.com"
                 required
               />
@@ -38,6 +92,8 @@ function Formulario() {
                 type="tel"
                 id="telefono"
                 name="telefono"
+                value={formData.telefono}
+                onChange={handleChange}
                 placeholder="Ej. 1234567890"
                 required
               />
@@ -48,6 +104,8 @@ function Formulario() {
               <textarea
                 id="direccion"
                 name="direccion"
+                value={formData.direccion}
+                onChange={handleChange}
                 placeholder="Tu dirección completa"
                 required
               ></textarea>
@@ -58,7 +116,13 @@ function Formulario() {
           <div className="columna">
             <div className="campo">
               <label htmlFor="tipo_mascota">¿Qué deseas adoptar?</label>
-              <select id="tipo_mascota" name="tipo_mascota" required>
+              <select
+                id="tipo_mascota"
+                name="tipo_mascota"
+                value={formData.tipo_mascota}
+                onChange={handleChange}
+                required
+              >
                 <option value="">Selecciona una opción</option>
                 <option value="perro">🐶 Perrito</option>
                 <option value="gato">🐱 Gatito</option>
@@ -72,6 +136,8 @@ function Formulario() {
               <textarea
                 id="experiencia"
                 name="experiencia"
+                value={formData.experiencia}
+                onChange={handleChange}
                 placeholder="Cuéntanos si has tenido mascotas antes..."
               ></textarea>
             </div>
@@ -84,6 +150,8 @@ function Formulario() {
                 type="number"
                 id="tiempo_libre"
                 name="tiempo_libre"
+                value={formData.tiempo_libre}
+                onChange={handleChange}
                 placeholder="Ej. 8"
                 required
               />
@@ -95,10 +163,25 @@ function Formulario() {
               </label>
               <div className="radio-group">
                 <label>
-                  <input type="radio" name="compromiso" value="si" required /> Sí
+                  <input
+                    type="radio"
+                    name="compromiso"
+                    value="si"
+                    checked={formData.compromiso === "si"}
+                    onChange={handleChange}
+                    required
+                  />{" "}
+                  Sí
                 </label>
                 <label>
-                  <input type="radio" name="compromiso" value="no" /> No
+                  <input
+                    type="radio"
+                    name="compromiso"
+                    value="no"
+                    checked={formData.compromiso === "no"}
+                    onChange={handleChange}
+                  />{" "}
+                  No
                 </label>
               </div>
             </div>
@@ -109,6 +192,21 @@ function Formulario() {
           </div>
         </form>
       </div>
+
+      {/* 🌟 Ventana emergente (popup) */}
+      {mostrarPopup && (
+        <div className="popup-fondo">
+          <div className="popup-exito">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/190/190411.png"
+              alt="Éxito"
+              className="icono-exito"
+            />
+            <h3>¡Formulario completado exitosamente! 🎉</h3>
+            <p>Gracias por tu compromiso con la adopción. 💖</p>
+          </div>
+        </div>
+      )}
     </>
   );
 }

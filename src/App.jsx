@@ -11,6 +11,7 @@ import Formulario from "./components/formulario";
 import Tips from "./components/tips";
 import Contactanos from "./components/contactanos";
 import Footer from "./components/footer";
+import Solicitudes from "./components/solicitudes";
 
 function App() {
   return (
@@ -57,6 +58,14 @@ function App() {
             element={
               <>
                 <Formulario />
+              </>
+            }
+          />
+          <Route
+            path="//solicitudes"
+            element={
+              <>
+                <Solicitudes />
               </>
             }
           />

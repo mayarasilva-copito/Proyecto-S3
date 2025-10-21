@@ -1,0 +1,51 @@
+.solicitudes-contenedor {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #f19797;
+  text-align: center;
+}
+
+.tarjeta-solicitud p {
+  font-size: 16px;
+  text-align: left;
+  margin: 8px 0;
+}
+
+button {
+  background-color: #f19797;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #e07d7d;
+}
+
+.sin-datos {
+  color: #888;
+  font-style: italic;
+  margin-top: 20px;
+}
+.boton-ver-solicitud {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: #f19797;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.boton-ver-solicitud:hover {
+  background-color: #e07d7d;
+}
