@@ -108,10 +108,28 @@ header {
 .team-card p {
   font-size: 90%;
 }
-.card-container img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 1rem;
+/* Ajuste de imágenes dentro de las tarjetas de misión y visión */
+.card-container .card img div{
+  width: 100%;           /* ocupa todo el ancho de la tarjeta */
+  height: 200px;         /* altura fija, así no se deforma */
+  object-fit: cover;     /* recorta sin estirarse */
+  border-radius: 10px;   /* bordes suaves */
+  margin-top: 1rem;      /* espacio entre texto e imagen */
+  display: block;
+}
+
+/* Ajuste general de las tarjetas */
+.card div{
+  background-color: #f19797;  /* color rosado bonito */
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+  color: black;
+  overflow: hidden;      /* evita que la imagen sobresalga */
+}
+
+.card:hover div{
+  transform: translateY(-5px);
 }

@@ -34,7 +34,9 @@ function Quienessomos() {
                 situación de calle, trabajando con la comunidad para ofrecerles
                 un hogar seguro y lleno de cariño.
               </p>
+              <div>
               <img src="./mision.png" alt="Melany" className="foto-miembro" />
+              </div>
             </div>
             <div className="card">
               <h3>Visión</h3>
@@ -44,7 +46,9 @@ function Quienessomos() {
                 mientras inspiramos a la sociedad a ser más consciente y
                 compasiva.
               </p>
-              <img src="./vvison.png" alt="Melany" className="foto-miembro" />
+              <div>
+              <img src="./mision.png" alt="Melany" className="foto-miembro" />
+              </div>
             </div>
           </div>
         </section>
