@@ -1,22 +1,20 @@
 {
   "cuidadosPerro": [
-    { "titulo": "Alimentación", "descripcion": "Dale comida adecuada para su tamaño y edad.", "icono": "https://cdn-icons-png.flaticon.com/512/3075/3075977.png" },
-    { "titulo": "Ejercicio", "descripcion": "Juega y sácalo a pasear todos los días.", "icono": "https://cdn-icons-png.flaticon.com/512/3064/3064197.png" },
-    { "titulo": "Baños", "descripcion": "Báñalo y cepilla su pelo regularmente.", "icono": "https://cdn-icons-png.flaticon.com/512/2329/2329020.png" },
-    { "titulo": "Vacunas", "descripcion": "Llévalo al veterinario y actualiza vacunas.", "icono": "https://cdn-icons-png.flaticon.com/512/2965/2965567.png" },
-    { "titulo": "Cariño", "descripcion": "Dedícale tiempo y amor todos los días.", "icono": "https://cdn-icons-png.flaticon.com/512/616/616408.png" },
-    { "titulo": "Hidratación", "descripcion": "Agua fresca siempre disponible.", "icono": "https://cdn-icons-png.flaticon.com/512/2917/2917242.png" },
-    { "titulo": "Socialización", "descripcion": "Deja que conozca otros perros y personas.", "icono": "https://cdn-icons-png.flaticon.com/512/2784/2784455.png" },
-    { "titulo": "Dientes", "descripcion": "Cepíllale los dientes o usa snacks dentales.", "icono": "https://cdn-icons-png.flaticon.com/512/2965/2965567.png" }
+    { "titulo": "Alimentación", "descripcion": "Dale comida adecuada para su tamaño y edad.", "icono": "./comida.jpg" },
+    { "titulo": "Ejercicio", "descripcion": "Juega y sácalo a pasear todos los días.", "icono": "./paseo.jpg" },
+    { "titulo": "Baños", "descripcion": "Báñalo y cepilla su pelo regularmente.", "icono": "./baño.jpg" },
+    { "titulo": "Vacunas", "descripcion": "Llévalo al veterinario y actualiza vacunas.", "icono": "./vacuna.jpg" },
+    { "titulo": "Cariño", "descripcion": "Dedícale tiempo y amor todos los días.", "icono": "./cariño.jpg" },
+    { "titulo": "Hidratación", "descripcion": "Agua fresca siempre disponible.", "icono": "./agua.jpg" },
+    { "titulo": "Socialización", "descripcion": "Deja que conozca otros perros y personas.", "icono": "./soli.jpg" }
   ],
   "cuidadosGato": [
-    { "titulo": "Alimentación", "descripcion": "Comida especial con proteínas necesarias.", "icono": "https://cdn-icons-png.flaticon.com/512/3075/3075977.png" },
-    { "titulo": "Caja de arena", "descripcion": "Mantén limpio su arenero diariamente.", "icono": "https://cdn-icons-png.flaticon.com/512/3064/3064197.png" },
-    { "titulo": "Juegos", "descripcion": "Proporciónale juguetes y rascadores.", "icono": "https://cdn-icons-png.flaticon.com/512/2329/2329020.png" },
-    { "titulo": "Veterinario", "descripcion": "Revisiones periódicas para su salud.", "icono": "https://cdn-icons-png.flaticon.com/512/2965/2965567.png" },
-    { "titulo": "Cepillado", "descripcion": "Cepíllalo para mantener su pelo limpio.", "icono": "https://cdn-icons-png.flaticon.com/512/2917/2917242.png" },
-    { "titulo": "Hidratación", "descripcion": "Agua fresca siempre disponible.", "icono": "https://cdn-icons-png.flaticon.com/512/2784/2784455.png" },
-    { "titulo": "Cariño", "descripcion": "Dale cariño respetando su espacio.", "icono": "https://cdn-icons-png.flaticon.com/512/616/616408.png" },
-    { "titulo": "Ambiente seguro", "descripcion": "Proporciónale lugares tranquilos y seguros.", "icono": "https://cdn-icons-png.flaticon.com/512/3075/3075977.png" }
+    { "titulo": "Alimentación", "descripcion": "Comida especial con proteínas necesarias.", "icono": "./comida.jpg" },
+    { "titulo": "Caja de arena", "descripcion": "Mantén limpio su arenero diariamente.", "icono": "./arena.jpg" },
+    { "titulo": "Juegos", "descripcion": "Proporciónale juguetes y rascadores.", "icono": "./juguete.jpg" },
+    { "titulo": "Veterinario", "descripcion": "Revisiones periódicas para su salud.", "icono": "./veterinaria.jpg" },
+    { "titulo": "Cepillado", "descripcion": "Cepíllalo para mantener su pelo limpio.", "icono": "./uñas.jpg" },
+    { "titulo": "Hidratación", "descripcion": "Agua fresca siempre disponible.", "icono": "./agua.jpg" },
+    { "titulo": "Cariño", "descripcion": "Dale cariño respetando su espacio.", "icono": "./espacio.jpg" }
   ]
 }

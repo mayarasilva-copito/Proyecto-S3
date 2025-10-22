@@ -17,14 +17,14 @@ header {
 
 /* Secciones */
 .section_quienesomos {
-  padding: 4rem 2rem;
-  max-width: 1100px;
+  padding: 6rem 4rem;
+  max-width: 1300px;
   margin: auto;
 }
 
 .section-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin-bottom: 2rem;
   color: #0c0000;
   position: relative;
@@ -33,103 +33,215 @@ header {
 .section-title::after {
   content: "";
   display: block;
-  width: 80px;
-  height: 3px;
+  width: 90px;
+  height: 4px;
   background: #f19797;
   margin: 0.5rem auto;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
-/* Tarjetas generales */
-.card-container {
+/* 🐾 HISTORIA */
+#historia .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* más anchas */
+  gap: 2rem; /* menos separación */
+  justify-items: center;
 }
 
-.card {
+#historia .card {
   background-color: #f19797;
-  border-radius: 12px;
-  padding: 1.5rem;
+  border-radius: 16px;
+  padding: 2rem;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
   color: black;
+  overflow: hidden;
+  max-width: 500px; /* más grandes */
+  font-size: 1.05rem;
 }
 
-.card:hover {
+#historia .card:hover {
   transform: translateY(-5px);
 }
 
-/* Equipo */
+/* 💭 MISION Y VISION */
+#mision-vision .card-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20rem; /* 🔹 más separación entre cartas */
+  flex-wrap: wrap;
+}
+
+#mision-vision .card {
+  background-color: #f19797;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  color: black;
+  max-width: 480px;
+  flex: 1 1 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 600px; /* 🔹 evita que se achique y tape la imagen */
+}
+
+#mision-vision .card h3 {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+}
+
+#mision-vision .card img {
+  width: 100%;
+  height: 240px; /* 🔹 imagen más alta y visible */
+  object-fit: cover;
+  border-radius: 12px;
+  margin-top: 1.2rem;
+}
+
+/* 💕 EQUIPO */
 .team-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  justify-items: center;
+  margin-top: 2rem;
 }
 
 .team-card {
   background: #f19797;
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 1.5rem;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
   transition: transform 0.3s;
+  max-width: 320px;
 }
 
 .team-card:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
-/* Imagen grande, centrada y normal */
 .team-card .foto-miembro {
-  width: 200px; /* tamaño de la imagen */
-  height: 200px; /* mismo alto para que sea circular */
-  border-radius: 50%; /* hace la imagen circular */
-  object-fit: cover; /* mantiene la proporción y recorta el exceso */
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
   display: block;
-  margin: 1rem auto; /* centrada horizontalmente y con espacio arriba y abajo */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* sombra opcional */
+  margin: 1rem auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Contenedor de imagen */
 .imagenlogo {
   width: 100%;
   margin: 1rem 0;
   text-align: center;
 }
 
-/* Títulos y textos */
 .team-card h4 {
   margin-bottom: 0.3rem;
   color: #000;
+  text-transform: capitalize;
 }
 
 .team-card p {
-  font-size: 90%;
-}
-/* Ajuste de imágenes dentro de las tarjetas de misión y visión */
-.card-container .card img div{
-  width: 100%;           /* ocupa todo el ancho de la tarjeta */
-  height: 200px;         /* altura fija, así no se deforma */
-  object-fit: cover;     /* recorta sin estirarse */
-  border-radius: 10px;   /* bordes suaves */
-  margin-top: 1rem;      /* espacio entre texto e imagen */
-  display: block;
+  font-size: 95%;
 }
 
-/* Ajuste general de las tarjetas */
-.card div{
-  background-color: #f19797;  /* color rosado bonito */
-  border-radius: 12px;
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s;
-  color: black;
-  overflow: hidden;      /* evita que la imagen sobresalga */
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  #mision-vision .card-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  #mision-vision .card {
+    max-width: 95%;
+    min-height: auto;
+  }
+
+  #historia .card {
+    max-width: 95%;
+  }
+
+  .team-card .foto-miembro {
+    width: 150px;
+    height: 150px;
+  }
+}
+.historia-ampliada {
+  padding: 6rem 3rem;
+  background-color: #f19797;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 5%;
 }
 
-.card:hover div{
-  transform: translateY(-5px);
+.historia-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.historia-texto {
+  max-width: 900px;
+  font-size: 18px;
+  line-height: 1.8;
+  text-align: justify;
+  color: #4a2d2d;
+}
+
+.historia-imagenes {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.historia-imagenes img {
+  width: 320px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.historia-imagenes img:hover {
+  transform: scale(1.05);
+}
+
+/* --- MISIÓN Y VISIÓN SEPARADAS --- */
+.mision-vision-separadas {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.imagen-misionvision img {
+  width: 220px;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+.redes {
+  margin-top: 0.2rem;
+}
+
+.redes a {
+  color: #000;
+  font-size: 1.4rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s;
+}
+
+.redes a:hover {
+  color: #fff;
 }

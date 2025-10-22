@@ -67,11 +67,6 @@ function Navbar() {
                 Contactos
               </Link>
             </li>
-            <li>
-              <button className="btn-carrito" onClick={toggleCarrito}>
-                <i className="fa-solid fa-hand-holding-heart"></i>
-              </button>
-            </li>
           </ul>
         </div>
       </nav>

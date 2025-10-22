@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/navbar";
 import Portada from "./components/portada";
@@ -12,77 +10,33 @@ import Tips from "./components/tips";
 import Contactanos from "./components/contactanos";
 import Footer from "./components/footer";
 import Solicitudes from "./components/solicitudes";
+import Carrito from "./components/carrito";
+
+function Rutas() {
+  const location = useLocation();
+  const mascotasAdoptadas = location.state?.mascotasAdoptadas || [];
+
+  return (
+    <Routes>
+      <Route path="/Portada" element={<Portada />} />
+      <Route path="/Quienessomos" element={<Quienessomos />} />
+      <Route path="/Listademascotas" element={<Listademascotas />} />
+      <Route path="/carrito" element={<Carrito mascotasAdoptadas={mascotasAdoptadas} />} />
+      <Route path="/tips" element={<Tips />} />
+      <Route path="/Formulario" element={<Formulario />} />
+      <Route path="/solicitudes" element={<Solicitudes />} />
+      <Route path="/Contactanos" element={<Contactanos />} />
+    </Routes>
+  );
+}
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route
-            path="/Portada"
-            element={
-              <>
-                <div>
-                  <Portada />
-                </div>
-              </>
-            }
-          />
-          <Route
-            path="/Quienessomos"
-            element={
-              <>
-                <Quienessomos />
-              </>
-            }
-          />
-          <Route
-            path="/Listademascotas"
-            element={
-              <>
-                <Listademascotas />
-              </>
-            }
-          />
-          <Route
-            path="/tips"
-            element={
-              <>
-                <Tips />
-              </>
-            }
-          />
-          <Route
-            path="/Formulario"
-            element={
-              <>
-                <Formulario />
-              </>
-            }
-          />
-          <Route
-            path="//solicitudes"
-            element={
-              <>
-                <Solicitudes />
-              </>
-            }
-          />
-          <Route
-            path="/Contactanos"
-            element={
-              <>
-                <Contactanos />
-              </>
-            }
-          />
-        </Routes>
-        <br />
-        <br />
-        <Footer />
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Navbar />
+      <Rutas />
+      <Footer />
+    </BrowserRouter>
   );
 }
 

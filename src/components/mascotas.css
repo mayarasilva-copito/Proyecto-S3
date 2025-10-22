@@ -1,135 +1,77 @@
 .ms-page {
   padding: 20px;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
   color: #111;
+  text-align: center;
 }
 
 .ms-title {
-  display: inline-block;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #965a5a;
   background-color: #f19797;
-  color: white;
   padding: 16px 40px;
   border-radius: 40px;
-  font-size: 42px;
-  font-weight: 800;
-  text-align: center;
-  letter-spacing: 1px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  margin: 30px auto 15px;
-  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
-  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin-bottom: 25px;
 }
 
-/* Centrar el título en la página */
-.ms-page {
-  text-align: center;
-}
-
-/* Subtítulo */
-.ms-sub {
-  text-align: center;
-  color: #555;
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
-/* Grid general */
+/* Grid y cartas */
 .ms-grid4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
+  margin-bottom: 30px;
 }
 
-@media (max-width: 1000px) {
-  .ms-grid4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+@media (max-width: 1000px) { .ms-grid4 { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 600px) { .ms-grid4 { grid-template-columns: 1fr; } }
 
-@media (max-width: 600px) {
-  .ms-grid4 {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* --- CARTAS --- */
-.ms-card,
-.card-mascota {
+.ms-card {
   background: #fff;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  max-width: 320px; /* carta más grande */
+  max-width: 320px;
   margin: auto;
 }
 
-.ms-card:hover,
-.card-mascota:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-}
+.ms-card:hover { transform: translateY(-6px); box-shadow: 0 8px 20px rgba(0,0,0,0.18); }
 
-/* --- IMÁGENES --- */
-.ms-img,
-.img-mascota {
+.ms-img {
   width: 100%;
-  height: 400px; /* 📸 más alto para que se vea mejor la imagen */
+  height: 400px;
   object-fit: cover;
-  background: #eee;
-  border-bottom: 4px solid #f19797; /* borde decorativo */
+  border-bottom: 4px solid #f19797;
   transition: transform 0.3s ease;
 }
 
-.ms-card:hover .ms-img,
-.card-mascota:hover .img-mascota {
-  transform: scale(1.05);
-}
+.ms-card:hover .ms-img { transform: scale(1.05); }
 
-/* --- TEXTO Y DETALLES --- */
-.ms-band {
-  background: #f6c6af;
-  padding: 14px;
-  text-align: center;
-  font-weight: 700;
-  font-size: 18px;
-  color: #333;
-}
+.ms-band { background: #f6c6af; padding: 14px; font-weight: 700; font-size: 18px; text-align: center; color: #333; }
 
-.ms-info {
-  padding: 10px 12px;
-  background: #fff6f2;
-  border-top: 1px solid rgba(0, 0, 0, 0.04);
-  font-size: 15px;
-}
+.ms-info { padding: 10px 12px; background: #fff6f2; border-top: 1px solid rgba(0,0,0,0.04); font-size: 15px; }
 
-.ms-detail,
-.detalle {
-  padding: 12px;
-  background: #fff;
-  color: #555;
-  font-style: italic;
-  font-size: 14px;
-}
+.ms-detail { padding: 12px; background: #fff; color: #555; font-style: italic; font-size: 14px; }
 
-/* --- BOTÓN ADOPTAR --- */
 .boton-adoptar {
   background-color: #f19797;
   color: white;
   border: none;
-  padding: 12px 20px;
-  margin: 15px 0;
+  padding: 12px 25px;
   border-radius: 25px;
   font-weight: bold;
   cursor: pointer;
+  font-size: 1rem;
   transition: all 0.3s ease;
   width: 80%;
+  margin: 15px 0;
 }
 
-.boton-adoptar:hover {
-  background-color: #f7b0b0;
-  transform: scale(1.05);
-}
+.boton-adoptar:hover { background-color: #f17878; transform: scale(1.05); }
+
+.pop { transform: scale(1.3); }
