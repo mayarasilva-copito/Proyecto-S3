@@ -12,7 +12,7 @@ body {
 }
 
 body {
-  background-image: url("https://img.freepik.com/vector-gratis/adorable-fondo-estampado-pata-perfecto-ninos-amantes-animales_1017-47508.jpg");
+  background-image: url('https://img.freepik.com/vector-gratis/adorable-fondo-estampado-pata-perfecto-ninos-amantes-animales_1017-47508.jpg');
 }
 
 .logo img {
@@ -37,7 +37,7 @@ section {
 }
 
 .home .content h3 {
-  font-size: 6rem;
+  font-size: 10rem;
   color: rgb(10, 12, 12);
 }
 
@@ -106,7 +106,12 @@ img {
   text-transform: none; /* aquí ya no aplica capitalize a todo */
   transition: 0.2s linear;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-transform: capitalize;
 }
 html {
@@ -126,7 +131,7 @@ section {
   color: #a10000;
   padding: 1rem;
   margin: 2rem 0;
-  background: #f7c59f;
+  background: #da7e62;
 }
 
 .heading span {
@@ -323,7 +328,7 @@ h1 {
 
 .about {
   min-height: 100vh; /* mínimo igual a la pantalla */
-  background-image: url("...");
+  background-image: url('...');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -370,7 +375,7 @@ h1.text-center {
   position: relative;
   height: 100vh;
   /* ocupa toda la pantalla */
-  background: url("../img/portada.jpg") no-repeat center center/cover;
+  background: url('../img/portada.jpg') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -402,11 +407,11 @@ h1.text-center {
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  font-family: "Arial", sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
 .hero-content p {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   line-height: 1.6;
 }
 
