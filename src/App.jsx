@@ -18,10 +18,15 @@ function Rutas() {
 
   return (
     <Routes>
-      <Route path="/Portada" element={<Portada />} />
+      <Route path="/" element={<Portada />} />
+      <Route path="/portada" element={<Portada />} />
+      <Route path="/portada" element={<Portada />} />
       <Route path="/Quienessomos" element={<Quienessomos />} />
       <Route path="/Listademascotas" element={<Listademascotas />} />
-      <Route path="/carrito" element={<Carrito mascotasAdoptadas={mascotasAdoptadas} />} />
+      <Route
+        path="/carrito"
+        element={<Carrito mascotasAdoptadas={mascotasAdoptadas} />}
+      />
       <Route path="/tips" element={<Tips />} />
       <Route path="/Formulario" element={<Formulario />} />
       <Route path="/solicitudes" element={<Solicitudes />} />
