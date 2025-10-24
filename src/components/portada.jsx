@@ -1,4 +1,4 @@
-import "./portada.css";
+import './portada.css'
 function Portada() {
   return (
     <>
@@ -71,6 +71,6 @@ function Portada() {
         </div>
       </section>
     </>
-  );
+  )
 }
-export default Portada;
+export default Portada
