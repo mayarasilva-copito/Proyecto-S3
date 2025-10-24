@@ -1,19 +1,19 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import "./navbar.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import './navbar.css'
+import '@fortawesome/fontawesome-free/css/all.min.css'
 
 function Navbar() {
-  const [carritoAbierto, setCarritoAbierto] = useState(false);
-  const [menuAbierto, setMenuAbierto] = useState(false);
+  const [carritoAbierto, setCarritoAbierto] = useState(false)
+  const [menuAbierto, setMenuAbierto] = useState(false)
 
   const toggleCarrito = () => {
-    setCarritoAbierto(!carritoAbierto);
-  };
+    setCarritoAbierto(!carritoAbierto)
+  }
 
   const toggleMenu = () => {
-    setMenuAbierto(!menuAbierto);
-  };
+    setMenuAbierto(!menuAbierto)
+  }
 
   return (
     <>
@@ -27,7 +27,7 @@ function Navbar() {
 
           {/* 🔹 Menú hamburguesa (solo en celular) */}
           <div
-            className={`menu-icon ${menuAbierto ? "activo" : ""}`}
+            className={`menu-icon ${menuAbierto ? 'activo' : ''}`}
             onClick={toggleMenu}
           >
             <div className="barra"></div>
@@ -36,10 +36,10 @@ function Navbar() {
           </div>
 
           {/* 🔹 Enlaces de navegación */}
-          <ul className={`nav-links ${menuAbierto ? "activo" : ""}`}>
+          <ul className={`nav-links ${menuAbierto ? 'activo' : ''}`}>
             <li>
               <Link to="/Portada" onClick={() => setMenuAbierto(false)}>
-                Home
+                Inicio
               </Link>
             </li>
             <li>
@@ -72,7 +72,7 @@ function Navbar() {
       </nav>
 
       {/* 🔹 Panel del carrito */}
-      <div className={`carrito-panel ${carritoAbierto ? "activo" : ""}`}>
+      <div className={`carrito-panel ${carritoAbierto ? 'activo' : ''}`}>
         <h2>Mi Carrito 🐾</h2>
         <p>Aquí aparecerán las mascotas que elijas para adoptar.</p>
         <button className="cerrar-btn" onClick={toggleCarrito}>
@@ -80,7 +80,7 @@ function Navbar() {
         </button>
       </div>
     </>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar
