@@ -12,6 +12,7 @@ import Footer from './components/footer'
 import Solicitudes from './components/solicitudes'
 import Carrito from './components/carrito'
 
+
 function Rutas() {
   const location = useLocation()
   const mascotasAdoptadas = location.state?.mascotasAdoptadas || []
