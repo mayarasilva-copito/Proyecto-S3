@@ -10,23 +10,22 @@ import Tips from './components/tips'
 import Contactanos from './components/contactanos'
 import Footer from './components/footer'
 import Solicitudes from './components/solicitudes'
-import Carrito from './components/carrito'
+import Login from './components/login'
+import RegistrarUsuario from './components/ResgistrarUsuario'
 
 
 function Rutas() {
   const location = useLocation()
-  const mascotasAdoptadas = location.state?.mascotasAdoptadas || []
 
   return (
     <Routes>
-      <Route path="/" element={<Portada />} />
+      <Route path="/" element={<>
+                <RegistrarUsuario />
+                <Portada />
+      </>} />
       <Route path="/portada" element={<Portada />} />
       <Route path="/Quienessomos" element={<Quienessomos />} />
       <Route path="/Listademascotas" element={<Listademascotas />} />
-      <Route
-        path="/carrito"
-        element={<Carrito mascotasAdoptadas={mascotasAdoptadas} />}
-      />
       <Route path="/tips" element={<Tips />} />
       <Route path="/Formulario" element={<Formulario />} />
       <Route path="/solicitudes" element={<Solicitudes />} />
