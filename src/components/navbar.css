@@ -80,79 +80,33 @@
   width: 100%;
 }
 
-/* Botón del carrito */
-.btn-carrito {
-  background: white;
-  color: #f19797;
-  border: none;
-  border-radius: 50%;
-  padding: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn-carrito:hover {
-  background-color: #ffe1e1;
-  transform: scale(1.1);
-}
-
-.carrito-panel h2 {
-  color: #f19797;
-  font-family: "Brush Script MT", cursive;
-  font-size: 30px;
-}
-
-.carrito-panel p {
-  color: #444;
-  font-size: 16px;
-  margin-top: 10px;
-}
-
-.cerrar-btn {
-  background-color: #f19797;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.cerrar-btn:hover {
-  background-color: #ffb4b4;
-}
-.carrito-panel {
-  position: fixed;
-  top: 0;
-  right: -400px;
-  width: 320px;
-  height: 100%;
-  background-color: #fff;
-  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
-  transition: right 0.4s ease;
-  padding: 20px;
-  z-index: 200;
-  display: flex;
+/* Menú hamburguesa */
+.menu-icon {
+  display: none;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-.carrito-panel.activo {
-  right: 0;
-}
-.btn-carrito i {
-  font-size: 2rem; /* tamaño del icono */
-  color: #f19797; /* color normal */
+  justify-content: center;
   cursor: pointer;
-  transition: color 0.3s, transform 0.3s; /* animación suave */
+  gap: 5px;
+  transition: all 0.3s ease;
 }
 
-.btn-carrito i:hover {
-  color: #f19797; /* cambia de color al pasar el mouse */
-  transform: scale(1.2); /* agranda un poco */
+.menu-icon .barra {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animación del menú activo */
+.menu-icon.activo .barra:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-icon.activo .barra:nth-child(2) {
+  opacity: 0;
+}
+.menu-icon.activo .barra:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* 📱 Versión móvil */
@@ -177,71 +131,6 @@
     height: 50px;
   }
 
-  .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    gap: 15px;
-    margin-top: 10px;
-  }
-
-  .nav-links a {
-    font-size: 16px;
-    padding: 5px 0;
-  }
-
-  .btn-carrito {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-  }
-}
-
-/* 📱 Aún más pequeño (por ejemplo, celulares muy chicos) */
-@media (max-width: 480px) {
-  .titulo {
-    font-size: 20px;
-  }
-
-  .nav-links a {
-    font-size: 15px;
-  }
-
-  .logo {
-    width: 45px;
-    height: 45px;
-  }
-}
-.menu-icon {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  cursor: pointer;
-  gap: 5px;
-  transition: all 0.3s ease;
-}
-
-.menu-icon .barra {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-/* 🔹 Cuando se activa (X animada) */
-.menu-icon.activo .barra:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-.menu-icon.activo .barra:nth-child(2) {
-  opacity: 0;
-}
-.menu-icon.activo .barra:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
-
-/* 📱 Ajustes para móvil */
-@media (max-width: 768px) {
   .menu-icon {
     display: flex;
     position: absolute;
@@ -271,12 +160,6 @@
   .nav-links a {
     font-size: 18px;
   }
-
-  .btn-carrito {
-    position: absolute;
-    top: 20px;
-    left: 25px;
-  }
 }
 
 /* ✨ Animación al abrir el menú */
@@ -288,5 +171,21 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* 📱 Muy pequeño */
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 20px;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+  }
+
+  .logo {
+    width: 45px;
+    height: 45px;
   }
 }

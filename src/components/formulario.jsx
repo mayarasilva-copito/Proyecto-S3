@@ -1,5 +1,8 @@
 import { useState } from "react";
 import "./formulario.css";
+import { db } from "../firebase";
+import { addDoc, collection } from "firebase/firestore";
+
 
 function Formulario() {
   // 🧠 Estado para los datos del formulario
@@ -24,13 +27,16 @@ function Formulario() {
   };
 
   // 🔹 Cuando se envía el formulario
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    // Aquí podrías guardar los datos en una base o enviar por API
-    console.log("Datos enviados:", formData);
+  try {
+    // Guardar el formulario en Firebase
+    await addDoc(collection(db, "formularios_adopcion"), formData);
 
-    // Mostrar popup de éxito
+    console.log("Formulario guardado en Firebase");
+
+    // Mostrar popup
     setMostrarPopup(true);
 
     // Limpiar formulario
@@ -45,9 +51,15 @@ function Formulario() {
       compromiso: "",
     });
 
-    // Cerrar el popup después de 4 segundos
+    // Ocultar popup
     setTimeout(() => setMostrarPopup(false), 4000);
-  };
+
+  } catch (error) {
+    console.error("Error al enviar formulario:", error);
+    alert("Hubo un error al enviar tu solicitud");
+  }
+};
+
 
   return (
     <>
